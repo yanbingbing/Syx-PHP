@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2009-2012 Kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2009-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 require_once 'Syx/Captcha/Abstract.php';
@@ -382,10 +382,12 @@ class Syx_Captcha_Image extends Syx_Captcha_Abstract
 				$coords = imagettftext($img, $fontsize, $degree,
 					$x + $scale, $y + $scale,
 					$shadowColor, $fontfile, $letter);
-			}
-			$coords = imagettftext($img, $fontsize, $degree,
+			} else {
+				$coords = imagettftext($img, $fontsize, $degree,
 				$x, $y,
 				$fgColor, $fontfile, $letter);
+			}
+
 			$x += ($coords[2] - $x) + ($fontcfg['spacing'] * $scale);
 		}
 

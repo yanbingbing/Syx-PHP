@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2009-2012 Kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2009-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 /**
@@ -211,11 +211,9 @@ class Syx_Db_Statement implements IteratorAggregate
 	public function execute(array $params = null)
 	{
 		try {
-			if ($params !== null) {
-				return $this->_stmt->execute($params);
-			} else {
-				return $this->_stmt->execute();
-			}
+			$ret = $params !== null ? $this->_stmt->execute($params) : $this->_stmt->execute();
+			Syx_Log::log($this->_stmt->queryString, Syx_Log::LOG);
+			return $ret;
 		} catch (PDOException $e) {
 			require_once 'Syx/Db/Statement/Exception.php';
 			throw new Syx_Db_Statement_Exception($e->getMessage(), (int)$e->getCode());

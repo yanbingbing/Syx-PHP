@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2009-2012 Kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2009-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 /**
@@ -431,6 +431,11 @@ class Syx_Platform
 		// define two very useful constant
 		define('APP_NAME', $this->getAppName());
 		define('APP_PATH', $this->getAppPath());
+
+		if (!is_dir(APP_PATH)) {
+			require_once 'Syx/Platform/Exception.php';
+			throw new Syx_Platform_Exception('Application "'.APP_NAME.'" not found');
+		}
 
 		// unset configure keys for platform only
 		foreach ($this->_options as $key) {

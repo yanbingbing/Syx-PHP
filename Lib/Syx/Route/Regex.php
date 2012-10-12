@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2009-2012 Kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2009-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 require_once 'Syx/Route/Interface.php';

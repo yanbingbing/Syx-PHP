@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2011-2012 kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2011-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 /*  remember framework start time  */

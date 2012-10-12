@@ -2,7 +2,7 @@
 /**
  * Syx Framework
  *
- * @copyright Copyright (c) 2009-2012 Kakalong CHINA (http://yanbingbing.com)
+ * @copyright Copyright (c) 2009-2012 Binbing CHINA (http://yanbingbing.com)
  */
 
 /**
@@ -337,6 +337,8 @@ class Syx_Table
 	}
 
 	/**
+	 * @param bool $withFrom
+	 *
 	 * @return Syx_Table_Select
 	 */
 	public function select($withFrom = true)
